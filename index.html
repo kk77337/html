@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反应速度挑战 - Reaction Speed Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ 反应速度挑战</h1>
+            <p class="subtitle">测试你的反应速度，挑战你的极限！</p>
+        </header>
+
+        <div class="game-area">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">当前得分</span>
+                    <span class="stat-value" id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最佳记录</span>
+                    <span class="stat-value" id="bestScore">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">平均反应</span>
+                    <span class="stat-value" id="avgReaction">-</span>
+                </div>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+                <div class="waiting-message" id="waitingMessage">
+                    <p>准备开始...</p>
+                    <p class="hint">当目标出现时，立即点击！</p>
+                </div>
+                <button class="target-button" id="targetButton" style="display: none;"></button>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" id="startBtn">开始游戏</button>
+                <button class="btn btn-secondary" id="resetBtn">重置</button>
+            </div>
+
+            <div class="difficulty-selector">
+                <label>难度等级：</label>
+                <select id="difficulty">
+                    <option value="easy">简单 (3秒)</option>
+                    <option value="medium" selected>中等 (2秒)</option>
+                    <option value="hard">困难 (1秒)</option>
+                    <option value="extreme">极限 (0.5秒)</option>
+                </select>
+            </div>
+
+            <div class="reaction-history" id="reactionHistory">
+                <h3>反应时间记录</h3>
+                <div class="history-list" id="historyList"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>互动体验网站</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
